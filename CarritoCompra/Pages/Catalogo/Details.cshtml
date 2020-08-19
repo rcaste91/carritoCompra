@@ -1,0 +1,55 @@
+﻿@page
+@model CarritoCompra.Pages.Catalogo.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Apellido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Apellido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Correo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Correo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Telefono)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Telefono)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Estado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Estado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.IdUsuarioNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.IdUsuarioNavigation.IdUsuario)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Cliente.IdCliente">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

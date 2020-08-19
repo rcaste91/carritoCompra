@@ -24,7 +24,7 @@ namespace CarritoCompra
 
             //crea conexion con datasource de sqlserver sacando datos de appsettings
             
-            services.AddDbContextPool<CarritoCompraDbContext>(options =>
+            services.AddDbContextPool<ShoppingCartContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("CarritoCompraDb"));
             });
